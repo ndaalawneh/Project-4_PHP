@@ -1,0 +1,115 @@
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.nav-link{
+    margin-right: 20px;
+ 
+}
+
+
+
+
+.top{
+    color: azure;
+
+
+}
+
+
+.text-muted{
+ 
+  background-color: #343A40;
+    width: 100%;
+    padding-left: 500px;
+    
+}
+.pa1{
+  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+    color: azure;
+    padding-top: 10px;
+    letter-spacing: 2px;
+}
+
+.pa2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 150px;
+    font-size: 15pt;
+    color: azure;
+    
+ 
+}
+
+.social{
+    padding-left: 130px;
+}
+
+
+.text-center {
+    text-align: center!important;
+    background-image: url("https://www.pointfranchise.co.uk/images/zoom/articles/clothing-stores.jpg");
+    
+    background-size: cover;
+   
+  
+  
+}
+
+.lead{
+    color: white;
+    font-size: 25pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+
+
+.jumbotron-heading{
+    color: white;
+    font-size: 30pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+
+ .add{
+    color: black;
+    background-color: white;
+    height: 150px;
+    width: 70px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+  
+
+
+}
+
+.add2{
+    color: black;
+    background-color: white;
+    height: 150px;
+    width: 70px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
