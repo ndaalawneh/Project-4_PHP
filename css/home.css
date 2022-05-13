@@ -103,6 +103,53 @@
 
 
 
+@media  (min-width:481px) and (max-width:768px){
+
+    .text-muted {
+       
+        padding-left: 10px;
+    }
+
+}
+
+
+
+@media  (max-width: 480px){
+
+    .text-muted {
+     
+        padding-left: 2px;
+    }
+
+    img {
+        vertical-align: middle;
+        border-style: none;
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .pa2 {
+        
+        padding-left: 2px;
+        font-size: 10pt;
+        
+    }
+
+    .top {
+    
+        display: none;
+    }
+
+    .social {
+        padding-left: 2px;
+    }
+    
+    
+}
+
+
+
 
 
 

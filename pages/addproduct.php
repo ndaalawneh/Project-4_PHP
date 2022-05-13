@@ -51,7 +51,7 @@ session_start() ;
 
 	<div class="page-content">
 		<div class="form-v5-content">
-			<form class="form-detail" action="../index.php" method="post">
+			<form class="form-detail" action="../pages/addproduct.php" method="post"  enctype = "multipart/form-data">
 				<h2>Add Product Form</h2>
 				<div class="form-row">
 					<label for="pname">Product Name</label>
@@ -70,7 +70,7 @@ session_start() ;
 				</div>
                 <div class="form-row">
 					<label for="pimg">Product Image</label>
-					<input type="text" name="pimg" id="password" class="input-text" placeholder="The Image Of The Product" required>
+					<input type="file" name="pimg"  class="input-text" placeholder="The Image Of The Product" required>
 					<i class="fas fa-lock"></i>
 				</div>
 				<div class="form-row-last">
@@ -105,13 +105,14 @@ session_start() ;
         if(empty($_POST['pprice'])){
         $op = false ;
         }
-        if(empty($_POST['pimg'])){
+        if(empty($_FILES['pimg']['name'])){
         $op = false ;
         }
 
         
         if($op){
-        $pro = array ("pname" => $_POST['pname'] , "pdesc" => $_POST['pdesc'] , "pprice" => $_POST['pprice'] , "pimg" => $_POST['pimg']) ;
+          move_uploaded_file($_FILES['pimg']['tmp_name'] , 'image/'.$_FILES['pimg']['name']) ;
+        $pro = array ("pname" => $_POST['pname'] , "pdesc" => $_POST['pdesc'] , "pprice" => $_POST['pprice'] , "pimg" => $_FILES['pimg']['name']) ;
         if(!isset($_SESSION['products'])){
             $_SESSION['products'] = array();
         }
@@ -127,18 +128,47 @@ session_start() ;
     }
    
     ?></div>
-    <?php 
-     if(isset($_SESSION['products'])){
-        $final = $_SESSION['products'][count($_SESSION['products'])-1] ;
-        echo '
-        <pre>
-        <img src = " '.$final['pimg'].'" > 
-        <h3> '.$final['pname'].' </h3>
-        <h3> '.$final['pdesc'].' </h3>
-        <h3> '.$final['pprice'].' </h3>
-        </pre>
-        ' ; 
-    }?>
+    
+    
+   
+
+<section>
+<div class="container" >
+     <table class="table table-striped">
+  
+       <thead>
+         <tr>
+           <th scope="col">Name</th>
+           <th scope="col">Description</th>
+           <th scope="col">Price</th>
+           <th scope="col">product image</th>
+         
+         </tr>
+       </thead>
+       <tbody>
+         <?php
+           if(!isset( $_SESSION['products'])){
+            $_SESSION['products'] = array() ;
+            }
+
+        for ($i=0; $i < count($_SESSION['products']); $i++) { 
+         $p =$_SESSION['products'][$i]; 
+         echo "<tr>";
+          echo '<td>' . $p['pname'] . '</td>';
+          echo '<td>' . $p['pdesc'] . '</td>';
+          echo '<td>' . $p['pprice'] . '</td>';
+          echo '<td>' . $p['pimg'] . '</td>';
+          
+          echo "<tr>";
+        }
+      ?>
+       </tbody>
+       
+     </table>
+     </div>
+   
+ </section>
+
 
 
 
@@ -147,13 +177,7 @@ session_start() ;
         <p class="float-right">
           <a class= "top" style=  "color" = "red" href="#">Back to top </a>
         </p>
-        <p class="pa1">Any Thing In Your Mind , Contact US ! </p>
-        <div class="social">
-       
-        <a href="#"   target = "-blank" > <img src = "https://o.remove.bg/downloads/6af697bd-be57-481b-a306-a770b35fc417/fb_icon_325x325-removebg-preview.png" width = "50px" height= "50px"></a>
-        <a href="#"   target = "-blank" > <img src = "https://o.remove.bg/downloads/b26ce984-d5c4-47b0-87aa-53f7375614f8/2-removebg-preview.png" width = "60px" height= "65px"></a>
-        <a href="#"  target = "-blank" > <img src = "https://o.remove.bg/downloads/efcb7e5b-2467-446c-a8cb-7e0ad914ad65/images-removebg-preview.png" width = "50px" height= "50px"></a>
-          </div>
+        
         <p class= "pa2">copyright&copy;2022</p>
         
       </div>

@@ -86,10 +86,7 @@ session_start();
         <div class="container">
           <h1 class="jumbotron-heading">Welcome To ZORO COLLECTION</h1>
           <p class="lead">Our Store Welcomes you , Here You Can Add What You like </p>
-          <p>
-            <a href="pages/addproduct.php" class="add">Click To Add </a>
-           
-          </p>
+         
         </div>
       </section>
 
@@ -104,7 +101,7 @@ session_start();
            echo '
            <div class="col-md-4">
            <div class="card mb-4 box-shadow">
-             <img class="card-img-top" src="'.$p['pimg'] .' " alt="Card image cap" width="500px" height="300px">
+             <img class="card-img-top" src="pages/image/'. $p['pimg'] .' " alt="Card image cap" width="500px" height="300px">
              <div class="card-body">
                <h2 class="card-text ndoosh ">'.$p['pname'].'</h2>
                <p class="card-text">'.$p['pdesc'].'</p>
@@ -146,13 +143,7 @@ session_start();
         <p class="float-right">
           <a class= "top" style=  "color" = "red" href="#">Back to top </a>
         </p>
-        <p class="pa1">Any Thing In Your Mind , Contact US ! </p>
-        <div class="social">
        
-        <a href="#"   target = "-blank" > <img src = "https://o.remove.bg/downloads/6af697bd-be57-481b-a306-a770b35fc417/fb_icon_325x325-removebg-preview.png" width = "50px" height= "50px"></a>
-        <a href="#"   target = "-blank" > <img src = "https://o.remove.bg/downloads/b26ce984-d5c4-47b0-87aa-53f7375614f8/2-removebg-preview.png" width = "60px" height= "65px"></a>
-        <a href="#"  target = "-blank" > <img src = "https://o.remove.bg/downloads/efcb7e5b-2467-446c-a8cb-7e0ad914ad65/images-removebg-preview.png" width = "50px" height= "50px"></a>
-          </div>
         <p class= "pa2">copyright&copy;2022</p>
         
       </div>
